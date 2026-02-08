@@ -4,97 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your PinkPantheress Song!</title>
+
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/normalize.css">
+
+
 </head>
 <body>
     <main>
         <div class="Intro-Text">
-            <h1>Which <span class="pump-demi">PinkPantheress</span> song are <span class="horatio-bold">you?</span></h1>
-            <p>Enter a date or Click a Zodiac Sign to find out!</p>
+            <h1 class="heading-which">Which</h1>
+            <h1 class="pink-pump">pinkpantheress</h1>
+            <h1 class="song">song are <span class="you-bold">you?</span></h1>
+            
         </div>
 
+        
+        
+        
+        <!--Calander drop down-->
+        <div class="calander-input">
+            <p>Enter a date or Click a Zodiac Sign to find out!</p>
+            
+            <div class="calander">
+                <input type="date" id="birthday-date">
+                
+                <!--Enter Button-->
+                <button class="button-design" id="find-out">FIND OUT!</button>
+            </div>
+            
+        </div>
 
 
         <!--left screen that slides in to show song description-->
-        <div class="zodiac-song-description">
-            <p><span class="zodiac-style-name" id="zodiac-name"></span>your song is...</p>
+          <!-- <div class="side-bar-info"> -->
+            <!--___ your song is...-->
+            <!-- <h1 id="z-name"></h1>
 
-            <!--album cover-->
-            <img id="album-image" src="" alt="PinkPantheress Album Cover">
+            <figure>
+                <img id="z-album-image" src="Content/Images/Album/tonight_album.webp" alt="album cover for Pinkpanthress's Tonight single">
+                <figcaption id="z-song"></figcaption>
+            </figure>
+            <p id="z-album-name"></p>
 
-            <h3 id="song-name"></h3>
-            <p id="album-name"></p>
+          
+            <p id="z-text1"></p>
+         
 
-            <div>
-                <div>
-                    <img id="zodiac-symbol" src="" alt="zodiac symbol">
-                    <p id="zodiac-info"></p>
-                </div>
-                
-                <p id="lyrics"></p>
-            </div>
-
-        </div>
-
-        <!--Calander drop down-->
-        <div class="calander-input">
-            <input type="date" id="birthday-date">
-
-            <!--Enter Button-->
-            <button class="Find-Out" id="find-out">FIND OUT!</button>
-        </div>
+            <p id="z-text2-lyric"></p>
+        </div> -->
 
         <!--grid-->
         <div class="zodiac-selection">
             <button id="sagittarius">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/sagit.webp" alt="PinkPantheress sitting in a red box, sitting agisnt the left side of the box">
             </button>
 
             <button id="capricon">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/capicorn.webp" alt="Snippet of a pinkpanthress collage featuring the Big Ben">
             </button>
 
             <button id="aquarius">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/aqua.webp" alt="Snippet of a pinkpanthress collage showing half a star, a bit of london city and color patterns">
             </button>
 
             <button id="pisces">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/pices.webp" alt="PinkPantheress sitting in a red box, her hand up againt the room">
             </button>
 
             <button id="leo">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/leo.webp" alt="Snippet of a pinkpanthress collage featuring the Big Ben">
             </button>
 
             <button id="virgo">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/virgo.webp" alt="PinkPantheress sitting in a red box, crouched and hands against each side of the box">
             </button>
 
             <button id="libra">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/libra.webp" alt="PinkPantheress sitting in a red box">
             </button>
 
             <button id="scorpio">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/scorpio.webp" alt="Snippet of a pinkpanthress collage featuring the letters 'ess' of pinkpanthress's name">
             </button>
             
             <button id="aries">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/aries.webp" alt="PinkPantheress sitting in a red box, laying back on the floor of the box">
             </button>
 
             <button id="taurus">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/tarus.webp" alt="Snippet of a pinkpanthress collage featuring the a bit of the phrase 'fancy that'">
             </button>
             
             <button id="gemini">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/gemini.webp" alt="Snippet of a pinkpanthress collage featuring a kiss stain">
             </button>
             
             <button id="cancer">
-                <img src="" alt="">
+                <img src="Content/Images/pink-grid/cancer.webp" alt="PinkPantheress sitting in a red box, sitting aginst the right side of the box">
             </button>
+        </div>
+
+        <div class="help-button-box">
+            <button id="open-help">?</button>
+
+            <dialog class="instructions">
+                <p>Find out your PinkPantheress Song based on your zodiac!</p>
+                <p>Enter your birthday then press the 'Find Out' button</p>
+                <p>or simply hover over a box to find your zodiac then click!</p>
+                <button id="close"></button>
+            </dialog>
 
         </div>
 
+<!--audio id?-->
+<!--java script goes here-->
 
     </main>
     
