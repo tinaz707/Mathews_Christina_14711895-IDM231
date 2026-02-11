@@ -36,12 +36,14 @@
     --small-text: 18px;
     --medium-text: 24px;
     --large-text: 36px;
-    --title-size-text: 90px;
+    --title-size-text: 75px;
 
     --tiny-space: 5px;
     --small-space: 10px;
     --medium-space: 20px;
     --large-space: 50px;
+
+    --line-height: 1.5;
 
 
 }
@@ -63,12 +65,14 @@ main{
 
 h1{
     font-family: var(--font-text);
+    line-height: var(--line-height);
 }
 
 p{
     color: var(--white);
     font-family: var(--font-text);
     font-size: var(--medium-text);
+    line-height: var(--line-height);
 }
 
 .Intro-Text{
@@ -80,7 +84,7 @@ p{
 
     color: var(--pink);
     text-shadow: -2px 2px var(--black-red);
-    font-size: var(--large-text);
+    font-size: 36px;
     
     
     
@@ -94,7 +98,7 @@ p{
         justify-self: center;
 
         grid-column: 2/span 3;
-        grid-row: 1/span 2;
+        grid-row:2;
         
     }
 
@@ -233,4 +237,109 @@ p{
         font-size: var(--small-text);
             
     }
+}
+
+.side-bar-info{
+
+    display: flex;
+    flex-direction: column;
+
+
+    background-color:rgba(41, 4, 4, 0.8);
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 40vw;
+    padding: var(--large-space);
+
+    /*____ your song is...*/
+    .zodiac-you-are{
+        
+        padding: var(--small-space);
+        display: flex;
+        flex-direction: row;
+        gap: var(--small-space);
+        align-items: flex-end;
+
+        h1{
+            color: var(--pink);
+            font-family: var(--font-title);
+            font-size: var(--large-text);
+            margin: 0;
+            
+        }
+
+        p{
+            margin: auto 0;
+        }
+        
+    }
+
+
+    /*album picute + name*/
+    .album-pic-name{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px auto;
+
+        
+        figure{
+            margin: 0;
+        }
+        
+
+        figcaption{
+            color: pink;
+            font-family: var(--font-text-bold);
+            font-size: var(--large-text);
+            text-align: center;
+            margin-top: var(--small-space);
+            filter: drop-shadow(0px 0px 10px var(--pink));
+
+        }
+
+        #z-album-image{
+            display: flex;
+            margin: auto;
+            filter: drop-shadow(0px 0px 15px var(--pink));
+            width: 300px;
+        }
+
+        #z-album-name{
+            text-align: center;
+            margin: 0;
+            font-style: italic;
+            
+        }
+    }
+
+    /*zodiac relation*/
+    .z-description{
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        width: 80%;
+        gap: var(--medium-space);
+        margin: 10px auto;
+
+        p{
+        font-size: 20px;
+           margin-bottom: auto;
+        }
+
+        /* #z-text1{
+            
+        } */
+
+        #z-text2-lyric{
+            text-align: right;
+            margin-top: auto;
+        }
+    }
+
 }
