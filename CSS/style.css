@@ -62,6 +62,8 @@ main{
     margin: 50px;
 }
 
+/* @media screen and (max-width: ) */
+
 
 h1{
     font-family: var(--font-text);
@@ -77,79 +79,37 @@ p{
 
 .Intro-Text{
     
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    column-gap: 20px;
-    grid-template-rows: repeat(3, 80px);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-    color: var(--pink);
-    text-shadow: -2px 2px var(--black-red);
-    font-size: 36px;
-    
-    
-    
-    .heading-which{
-        margin: 0;
+
+    .introv2{
+        margin: var(--medium-space) 0;
+        color: var(--pink);
+        text-shadow: -2px 2px var(--black-red);
+        font-size:var(--title-size-text);
+        letter-spacing: var(--small-space);
+
        
-        text-align: center;
-        letter-spacing: var(--tiny-space);
-        
-        align-self: center;
-        justify-self: center;
-
-        grid-column: 2/span 3;
-        grid-row:2;
-        
     }
 
-    
     .pink-pump{
-        margin: 0;
-        padding-top: 20px;
     
-        grid-column: 3/span 8;
-        grid-row: 2;
-        align-self: center;
 
-        color: var(--pink);
         font-family: var(--font-title);
-        font-size: var(--title-size-text);
-        
-        letter-spacing: var(--small-space);
         text-align: center;
         text-shadow: -10px 10px var(--black-red);
-       transform: rotate(-2deg);
-
 
     }
 
-    
-    .song{
-        margin: 0;
-        grid-column: 7/span 7;
-        grid-row: 3;
-        text-align: center;
-        letter-spacing: var(--tiny-space);
-
-       
-
-
-    }
-
-    
-    .you-bold{
-        margin: 0;
-        
-        
-    }
 }
-
-
 
 /*calander*/
 .calander-input{
 
-    margin: 50px 0 20px;
+    margin: 10px 0 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -168,16 +128,24 @@ p{
 .button-design{
 
     background-color: transparent;
-    padding: 10px 35px;
-    border: 2px dashed var(--white);
-    border-radius: var(--medium-space);
-    
-    
-    color: var(--white);
-    font-family: var(--font-text-bold);
-    font-size: var(--small-text);
-    font-style: italic;
+        padding: 10px 18px;
+        border: 3px solid var(--pink);
+        border-radius: var(--large-space);
+        background-color: var(--black-red);
+        filter: drop-shadow(0px 0px 10px var(--pink));
+       
+
+        color: var(--pink);
+        font-family: var(--font-text-bold);
+        font-size: var(--small-text);
+
+        letter-spacing: 2px;
+
+   
 }
+ .button-design:hover{
+         animation: grow .2s ease-out forwards;
+    }
 
 #birthday-date{
     margin: 0 5px;
@@ -192,7 +160,9 @@ p{
 }
 
 
+
 .zodiac-selection{
+
     display: grid;
     grid-template-columns: repeat(4, 1fr); 
     gap: var(--medium-space);
@@ -200,11 +170,18 @@ p{
     margin: auto;
 
     max-width: 700px;
+    
 
     button{
         background-color: transparent;
         border: none;
         padding: 0;
+        cursor: pointer;
+    }
+
+    button:hover{
+        
+        animation: grow .2s ease-out forwards;
     }
 
     img{
@@ -217,53 +194,52 @@ p{
 
 }
 
-.help-button-box{
-    display: flex;
-    justify-content: flex-end;
-     max-width: 700px;
-    margin: auto;
-
-    #open-help{       
-        margin: 10px 0px;
-        
-        padding: 10px 15px;
-        border: 2px solid var(--black-red);
-        border-radius: var(--large-space);
-       
-            
-            
-        color: var(--black-red);
-        font-family: var(--font-text-bold);
-        font-size: var(--small-text);
-            
+@keyframes grow {
+    0%{
+        transform: scale(1);   
+    }
+    100%{
+        transform: scale(1.1);
     }
 }
 
+
+
+
 .side-bar-info{
 
-    display: flex;
-    flex-direction: column;
-
-
+   
     background-color:rgba(41, 4, 4, 0.8);
-    
     position: fixed;
+    z-index: 2;
     top: 0;
-    left: 0;
-    bottom: 0;
-    width: 40vw;
+    /* left: -40vw; off screen */
+    left:0 ;
+    width: 40vw; /*850px*/
     padding: var(--large-space);
+    transition: left .5s ease;
+    transition:  left 0.4s ease;
+
+    .side-bar-info.active{
+        left:0;
+    }
 
     /*____ your song is...*/
+    .zodiac-wrap{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
     .zodiac-you-are{
         
         padding: var(--small-space);
         display: flex;
         flex-direction: row;
         gap: var(--small-space);
-        align-items: flex-end;
+        padding-left: 10%;
 
-        h1{
+        #z-name{
             color: var(--pink);
             font-family: var(--font-title);
             font-size: var(--large-text);
@@ -282,7 +258,7 @@ p{
     .album-pic-name{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        align-content: center ;
         margin: 10px auto;
 
         
@@ -302,11 +278,16 @@ p{
         }
 
         #z-album-image{
-            display: flex;
             margin: auto;
             filter: drop-shadow(0px 0px 15px var(--pink));
             width: 300px;
+
+
+           
+            animation: spin 8s linear infinite;
+
         }
+
 
         #z-album-name{
             text-align: center;
@@ -316,20 +297,23 @@ p{
         }
     }
 
+
     /*zodiac relation*/
     .z-description{
         
         display: flex;
         flex-direction: column;
         justify-content: center;
-        margin: auto;
         width: 80%;
         gap: var(--medium-space);
         margin: 10px auto;
+        letter-spacing: 1.5px;
+        
 
         p{
         font-size: 20px;
            margin-bottom: auto;
+            
         }
 
         /* #z-text1{
@@ -343,3 +327,132 @@ p{
     }
 
 }
+
+.side-bar-info.active{
+    left:0;
+}
+
+
+    @keyframes spin{
+        from{
+            transform:  rotate(0);
+        }
+        to{
+            transform: rotate(360deg);
+            }
+    }
+
+#z-text2-lyric{
+    font-style: italic;
+}
+
+/*container for help button position*/
+.hb-container{
+    position: relative;
+    bottom: 55px;
+    max-width: 835px;
+    margin: auto;
+}
+
+
+/*help instructions*/
+.help-button-box{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    
+    .instructions{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: var(--pink);
+        padding: var(--medium-space);
+        border-radius: var(--medium-space);
+        border: 5px solid var(--black-red);
+        box-shadow:  0 5px 5px var(--black-red);
+
+        ul{
+            margin: var(--medium-space);
+            color: var(--black-red);
+            font-weight: 800;
+            letter-spacing: 2px;
+            list-style-type: none;
+           
+            font-family: var(--font-text);
+            font-size: var(--medium-text);
+            display: flex;
+            flex-direction: column;
+            gap: var(--medium-space);
+
+            .find-yours{
+                text-align: center;
+                font-family: var(--font-text-bold);
+            }
+        }
+      
+    }
+}
+
+   
+
+
+/*?*/
+.help-open-buttons{       
+
+    position: absolute;
+    right: 0;
+    
+
+
+
+        margin: 0;    
+        padding: 10px 18px;
+        border: 3px solid var(--pink);
+        border-radius: var(--large-space);
+        background-color: var(--black-red);
+
+        color: var(--pink);
+        font-family: var(--font-text-bold);
+        font-size: var(--medium-text);
+
+        letter-spacing: 2px;
+            
+}
+
+
+.help-close-buttons{       
+        margin: 10px 0;
+        
+        padding: 20px 25px;
+        border: 3px solid var(--pink);
+        border-radius: var(--large-space);
+        background-color: var(--black-red);
+       
+
+        color: var(--pink);
+        font-family: var(--font-text-bold);
+        font-size: var(--medium-text);
+
+        letter-spacing: 2px;
+            
+}
+
+
+.help-open-buttons:hover{
+     animation: grow .2s ease-out forwards;
+}
+
+
+.help-close-buttons:hover{
+     animation: grow .2s ease-out forwards;
+}
+
+

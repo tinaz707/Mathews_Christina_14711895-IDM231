@@ -13,18 +13,21 @@
 <body>
     <main>
         <div class="Intro-Text">
-            <h1 class="heading-which">Which</h1>
+            <!-- <h1 class="heading-which">Which</h1>
             <h1 class="pink-pump">pinkpantheress</h1>
-            <h1 class="song">song are <span class="you-bold">you?</span></h1>
-            
+            <h1 class="song">song are <span class="you-bold">you?</span></h1> -->
+            <h1 class="introv2">Which <span class="pink-pump">pinkpantheress</span> song are you!?</h1>
+
         </div>
+
+
 
         
         
         
         <!--Calander drop down-->
         <div class="calander-input">
-            <p>Enter a date or Click a Zodiac Sign to find out!</p>
+            <p>Enter a date or Click a box to find out!</p>
             
             <div class="calander">
                 <input type="date" id="birthday-date">
@@ -37,34 +40,42 @@
 
 
         <!--left screen that slides in to show song description-->
-        <aside class="side-bar-info">
-            <!--___ your song is...-->
-            <div class="zodiac-you-are">
-                <h1 id="z-name">Sagittrius</h1>
-                <p>your song is...</p>
+        
+        <aside class="side-bar-open">
+            <div class="side-bar-info">
+                <!--___ your song is...-->
+                <div class="zodiac-wrap">
+                    <div class="zodiac-you-are">
+                         <p id="z-name">Sagittrius</p>
+                        <p>your song is...</p> 
+                    </div>
+
+                    <div class="album-pic-name">
+                        <figure>
+                            <img id="z-album-image" src="Content/Images/Album/tonight_album.webp" alt="album cover for Pinkpanthress's Tonight single">
+                            <figcaption id="z-song">Tonight</figcaption>
+                        </figure>
+                        <p id="z-album-name">from Fancy That</p>                
+                    </div>
+                </div>
+
+                <div class="z-description">
+                        <p id="z-text1">Born from November 22nd to December 21st, Sagittarians are on top of the world! They aren’t afraid to dive headfirst into the unknown. It also means they often make impulsive decisions and options off pure emotion. They truly are free spirits, nothing holds them back!</p>
+                    
+
+                        <p id="z-text2-lyric">“Talk later, that's why I'm goin' tonight /You're hot, on fire, that's why I'm goin' tonight"</p>            
+                </div>                
             </div>
 
-            <div class="album-pic-name">
-                <figure>
-                    <img id="z-album-image" src="Content/Images/Album/tonight_album.webp" alt="album cover for Pinkpanthress's Tonight single">
-                    <figcaption id="z-song">Tonight</figcaption>
-                </figure>
-                <p id="z-album-name">from Fancy That</p>                
-            </div>
-
-
-          <div class="z-description">
-                <p id="z-text1">Born from November 22nd to December 21st, Sagittarians are on top of the world! They aren’t afraid to dive headfirst into the unknown. It also means they often make impulsive decisions and options off pure emotion. They truly are free spirits, nothing holds them back!</p>
-            
-
-                <p id="z-text2-lyric">“Talk later, that's why I'm goin' tonight /You're hot, on fire, that's why I'm goin' tonight"</p>            
-          </div>
 
         </aside>
 
         <!--grid-->
+        <div>
+
+        </div>
         <div class="zodiac-selection">
-            <button id="sagittarius">
+            <button id="sagittarius" class="button-check">
                 <img src="Content/Images/pink-grid/sagit.webp" alt="PinkPantheress sitting in a red box, sitting agisnt the left side of the box">
             </button>
 
@@ -113,24 +124,28 @@
             </button>
         </div>
 
-        <div class="help-button-box">
-            <button id="open-help">?</button>
 
-            <dialog class="instructions">
-                <p>Find out your PinkPantheress Song based on your zodiac!</p>
-                <p>Enter your birthday then press the 'Find Out' button</p>
-                <p>or simply hover over a box to find your zodiac then click!</p>
-                <button id="close"></button>
-            </dialog>
-
+        <div class="hb-container">
+                    <button id="open-help" class="help-open-buttons">?</button>
         </div>
+<!-- 
+        <div id="help-button" class="help-button-box">
+            <div class="instructions">
+                <ul>
+                    <li class="find-yours">Find out your PinkPantheress Song based on your zodiac!</li>
+                    <li>1. Enter your birthday date</li>
+                    <li>2. Click the'Find Out' button to find out your song!</li>
+                    <li>3. You can also Click any Box to see other zodiacs and their songs</li>
+                </ul>
+                
+                <button id="close-help" class="help-close-buttons">CLOSE</button>
+            </div>
+        </div> -->
 
-<!--audio id?-->
-<!--java script goes here-->
-
+        
     </main>
 
-    <script src="scripts/main.j"></script>
+    <script src="scripts/main.js"></script>
     
 </body>
 </html>
