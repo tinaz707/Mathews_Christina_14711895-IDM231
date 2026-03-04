@@ -205,23 +205,32 @@ p{
 
 
 
-
+/*side bar overlay*/
 .side-bar-info{
 
-   
     background-color:rgba(41, 4, 4, 0.8);
     position: fixed;
     z-index: 2;
     top: 0;
-    /* left: -40vw; off screen */
-    left:0 ;
+    bottom: 0;
+    left: -4400px; 
     width: 40vw; /*850px*/
     padding: var(--large-space);
     transition: left .5s ease;
-    transition:  left 0.4s ease;
+    
 
-    .side-bar-info.active{
-        left:0;
+    .exit-box{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0;
+        
+        
+        img{
+            width: 70px;
+            cursor: pointer;
+        }
     }
 
     /*____ your song is...*/
@@ -316,20 +325,21 @@ p{
             
         }
 
-        /* #z-text1{
-            
-        } */
-
-        #z-text2-lyric{
-            text-align: right;
-            margin-top: auto;
-        }
+       
     }
 
 }
 
-.side-bar-info.active{
+.side-bar-info.show{
     left:0;
+    background-color:rgba(41, 4, 4, 0.8);
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    width: 40vw; /*850px*/
+    padding: var(--large-space);
+    transition: left .5s ease;
 }
 
 
@@ -355,8 +365,8 @@ p{
 }
 
 
-/*help instructions*/
-.help-button-box{
+/*help instructions show*/
+.help-button-box.show{
 
     position: fixed;
     top: 0;
@@ -366,7 +376,29 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--black-red) 0.5;
     backdrop-filter: blur(10px);
+    opacity: 1;
+    pointer-events: auto; /*elements behind this cant be interacted with*/
+    
+
+
+    
+ 
+}
+
+.help-button-box{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none; /*elements still able to be interacted with*/
     
     .instructions{
         max-width: 100%;
@@ -401,18 +433,12 @@ p{
     }
 }
 
-   
-
-
 /*?*/
 .help-open-buttons{       
 
     position: absolute;
     right: 0;
     
-
-
-
         margin: 0;    
         padding: 10px 18px;
         border: 3px solid var(--pink);

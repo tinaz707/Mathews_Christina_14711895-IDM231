@@ -29,12 +29,12 @@
         <div class="calander-input">
             <p>Enter a date or Click a box to find out!</p>
             
-            <div class="calander">
+            <form>
                 <input type="date" id="birthday-date">
                 
                 <!--Enter Button-->
                 <button class="button-design" id="find-out">FIND OUT!</button>
-            </div>
+            </form>
             
         </div>
 
@@ -43,10 +43,14 @@
         
         <aside class="side-bar-open">
             <div class="side-bar-info">
+
+                <figure class="exit-box">
+                    <img class="exit-button" src="Content/Images/exit.webp" alt="an 'x' button for exiting out the viewing">
+                </figure>
                 <!--___ your song is...-->
                 <div class="zodiac-wrap">
                     <div class="zodiac-you-are">
-                         <p id="z-name">Sagittrius</p>
+                         <p id="z-name"></p>
                         <p>your song is...</p> 
                     </div>
 
@@ -62,8 +66,6 @@
                 <div class="z-description">
                         <p id="z-text1">Born from November 22nd to December 21st, Sagittarians are on top of the world! They aren’t afraid to dive headfirst into the unknown. It also means they often make impulsive decisions and options off pure emotion. They truly are free spirits, nothing holds them back!</p>
                     
-
-                        <p id="z-text2-lyric">“Talk later, that's why I'm goin' tonight /You're hot, on fire, that's why I'm goin' tonight"</p>            
                 </div>                
             </div>
 
@@ -128,8 +130,8 @@
         <div class="hb-container">
                     <button id="open-help" class="help-open-buttons">?</button>
         </div>
-<!-- 
-        <div id="help-button" class="help-button-box">
+
+        <div id="help-button-box" class="help-button-box show">
             <div class="instructions">
                 <ul>
                     <li class="find-yours">Find out your PinkPantheress Song based on your zodiac!</li>
@@ -140,7 +142,7 @@
                 
                 <button id="close-help" class="help-close-buttons">CLOSE</button>
             </div>
-        </div> -->
+        </div>
 
         
     </main>
