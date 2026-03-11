@@ -127,13 +127,14 @@ p{
 
 .button-design{
 
-    background-color: transparent;
+        background-color: transparent;
         padding: 10px 18px;
         border: 3px solid var(--pink);
         border-radius: var(--large-space);
         background-color: var(--black-red);
-        filter: drop-shadow(0px 0px 10px var(--pink));
        
+        filter: drop-shadow(0px 0px 5px var(--pink));
+        
 
         color: var(--pink);
         font-family: var(--font-text-bold);
@@ -147,7 +148,7 @@ p{
          animation: grow .2s ease-out forwards;
     }
 
-#birthday-date{
+#birthdayDate{
     margin: 0 5px;
     border: 2px solid var(--black-red);
 
@@ -181,7 +182,7 @@ p{
 
     button:hover{
         
-        animation: grow .2s ease-out forwards;
+        animation: grow .2s ease-in-out forwards;
     }
 
     img{
@@ -194,14 +195,6 @@ p{
 
 }
 
-@keyframes grow {
-    0%{
-        transform: scale(1);   
-    }
-    100%{
-        transform: scale(1.1);
-    }
-}
 
 
 
@@ -216,7 +209,8 @@ p{
     left: -4400px; 
     width: 40vw; /*850px*/
     padding: var(--large-space);
-    transition: left .5s ease;
+    transition: left .5s ease-in;
+    opacity: 0;
     
 
     .exit-box{
@@ -226,12 +220,17 @@ p{
         justify-content: flex-end;
         margin: 0;
         
-        
         img{
-            width: 70px;
+            height: 60px;
+            /* position: absolute;
+            top: 50px; */
             cursor: pointer;
         }
     }
+
+    /* .exit-box:hover{
+        animation: grow .2s ease-in-out forwards;
+    } */
 
     /*____ your song is...*/
     .zodiac-wrap{
@@ -340,6 +339,7 @@ p{
     width: 40vw; /*850px*/
     padding: var(--large-space);
     transition: left .5s ease;
+    opacity: 1;
 }
 
 
@@ -364,28 +364,6 @@ p{
     margin: auto;
 }
 
-
-/*help instructions show*/
-.help-button-box.show{
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--black-red) 0.5;
-    backdrop-filter: blur(10px);
-    opacity: 1;
-    pointer-events: auto; /*elements behind this cant be interacted with*/
-    
-
-
-    
- 
-}
 
 .help-button-box{
     
@@ -431,6 +409,27 @@ p{
         }
       
     }
+}
+
+
+/*help instructions show*/
+.help-button-box.show{
+
+    position: fixed;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--black-red) 0.5;
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    pointer-events: auto; /*elements behind this cant be interacted with*/
+    
+
 }
 
 /*?*/
@@ -482,3 +481,12 @@ p{
 }
 
 
+@keyframes grow {
+    0%{
+        transform: scale(1);   
+    }
+    100%{
+        transform: scale(1.1);
+    }
+    
+}
