@@ -85,7 +85,7 @@ p{
     align-items: center;
 
 
-    .introv2{
+    .intro-v{
         margin: var(--medium-space) 0;
         color: var(--pink);
         text-shadow: -2px 2px var(--black-red);
@@ -107,7 +107,7 @@ p{
 }
 
 /*calander*/
-.calander-input{
+.calender-input{
 
     margin: 10px 0 20px;
     display: flex;
@@ -121,7 +121,7 @@ p{
     }
 }
 
-.calander{
+.calender{
     margin-bottom: var(--medium-space);
 }
 
@@ -195,23 +195,30 @@ p{
 
 }
 
-
-
-
-/*side bar overlay*/
-.side-bar-info{
-
-    background-color:rgba(41, 4, 4, 0.8);
+.side-bar-open{
+    backdrop-filter: blur(10px);
+    width: 100vw;
+    height: 100vh;
     position: fixed;
-    z-index: 2;
     top: 0;
-    bottom: 0;
-    left: -4400px; 
-    width: 40vw; /*850px*/
-    padding: var(--large-space);
-    transition: left .5s ease-in;
     opacity: 0;
-    
+    left: -2000px; 
+    z-index: 20;
+        
+    /*side bar overlay*/
+    .side-bar-info{
+
+        background-color:var(--black-red);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -4400px; 
+        width: 40vw; /*850px*/
+        padding: 80px var(--large-space);
+        transition: left .5s ease-in;
+        opacity: 0;
+
+        
 
     .exit-box{
         
@@ -219,7 +226,13 @@ p{
         flex-direction: row;
         justify-content: flex-end;
         margin: 0;
+        max-width: 60px;
+        position: absolute;
+        right: 40px;
+        top: 40px;
         
+        
+
         img{
             height: 60px;
             /* position: absolute;
@@ -228,14 +241,12 @@ p{
         }
     }
 
-    /* .exit-box:hover{
-        animation: grow .2s ease-in-out forwards;
-    } */
 
     /*____ your song is...*/
     .zodiac-wrap{
         display: flex;
         flex-direction: column;
+        gap: 20px;
         
     }
 
@@ -245,7 +256,7 @@ p{
         display: flex;
         flex-direction: row;
         gap: var(--small-space);
-        padding-left: 10%;
+        padding: 20px 10%;
 
         #z-name{
             color: var(--pink);
@@ -257,6 +268,12 @@ p{
 
         p{
             margin: auto 0;
+        }
+
+        .ur-name-group{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
         }
         
     }
@@ -280,18 +297,16 @@ p{
             font-family: var(--font-text-bold);
             font-size: var(--large-text);
             text-align: center;
-            margin-top: var(--small-space);
-            filter: drop-shadow(0px 0px 10px var(--pink));
+            margin-top: var(--medium-space);
+            filter: drop-shadow(0px 0px 5px var(--pink));
 
         }
 
         #z-album-image{
             margin: auto;
-            filter: drop-shadow(0px 0px 15px var(--pink));
+            filter: drop-shadow(0px 0px 25px var(--pink));
             width: 300px;
-
-
-           
+ 
             animation: spin 8s linear infinite;
 
         }
@@ -301,6 +316,7 @@ p{
             text-align: center;
             margin: 0;
             font-style: italic;
+            margin-top: var(--small-space);
             
         }
     }
@@ -317,29 +333,33 @@ p{
         margin: 10px auto;
         letter-spacing: 1.5px;
         
-
+    
         p{
-        font-size: 20px;
-           margin-bottom: auto;
-            
+            font-size: 20px;
+            margin-bottom: auto;
+            text-align: center;
         }
 
+       
        
     }
 
 }
+}
 
-.side-bar-info.show{
-    left:0;
-    background-color:rgba(41, 4, 4, 0.8);
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    bottom: 0;
-    width: 40vw; /*850px*/
-    padding: var(--large-space);
+.side-bar-open.show{
+    left: 0;
+    width: 100vw; /*850px*/
+    transition: opacity .5s ease;
+    opacity: 1;
+
+    .side-bar-info{
+    left:25%;
+    width: 50vw; /*850px*/
     transition: left .5s ease;
     opacity: 1;
+    }
+
 }
 
 
@@ -352,9 +372,6 @@ p{
             }
     }
 
-#z-text2-lyric{
-    font-style: italic;
-}
 
 /*container for help button position*/
 .hb-container{
@@ -416,7 +433,7 @@ p{
 .help-button-box.show{
 
     position: fixed;
-    z-index: 20;
+    z-index: 10;
     top: 0;
     left: 0;
     width: 100vw;
