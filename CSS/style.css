@@ -86,7 +86,7 @@ p{
 
 
     .intro-v{
-        margin: var(--medium-space) 0;
+        margin: 0;
         color: var(--pink);
         text-shadow: -2px 2px var(--black-red);
         font-size:var(--title-size-text);
