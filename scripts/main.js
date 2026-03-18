@@ -4,7 +4,7 @@ const zodiacSigns = [
         song:"Tonight",
         sound: "Content/Music/sagittrius_Tonight.mp3",
         image: "Content/Images/Album/tonight_album.webp",
-        album: "from Fancy That",
+        album: "from Fancy That !",
         text: "Born from November 22nd to December 21st, Sagittarius people are on top of the world! We are the subjects, and they are the leader. They aren’t afraid to dive headfirst into the unknown. They truly are free spirits, nothing holds them back! With so much enthusiasm, it can be hard to truly focus on one thing at a time.",
     },
 
@@ -13,7 +13,7 @@ const zodiacSigns = [
         song:"Capable of Love",
         sound: "Content/Music/capricorn_CapableOfLove.mp3",
         image: "Content/Images/Album/heavenKnows_album.webp",
-        album: "from Heaven Knows",
+        album: "from Heaven Knows !",
         text: "Born from December 22nd to January 19th, Capricorns are truly the responsible ones in every friend group. They are independent and know how to manage just about anyone. All they need is your respect and to be able to prove themselves. It's no surprise their biggest rival is themselves!",
     },
 
@@ -22,7 +22,7 @@ const zodiacSigns = [
         song:"Feel Complete",
         sound: "Content/Music/Aquarius_feelcomplete.mp3",
         image: "Content/Images/Album/fell_complete_album.webp",
-        album: "from Heaven Knows",
+        album: "from Heaven Knows !!",
         text: "Born from January 22nd to February 18th, Aquarius can be both shy and energetic. Being boring isn’t in their dictionary, it's in them to live as the opposite of everyone else around them. They define themselves rather than having the world plaster a definition on them!",
     },
         {
@@ -30,7 +30,7 @@ const zodiacSigns = [
         song:"Take Me Home",
         sound: "Content/Music/Pisces_Take_Me_home.mp3",
         image: "Content/Images/Album/take_me_home_album.webp",
-        album: "from To Hell With It",
+        album: "from To Hell With It !",
         text: "Born from February 19th to March 20th, Pisces are a very friendly bunch. They adapt their personality to whomever they find themselves with! They can’t stick to one form but want to become one with everything around them. Regardless of it all, they are very charming and compassionate!",
     },
         {
@@ -38,7 +38,7 @@ const zodiacSigns = [
         song:"Stars",
         sound: "Content/Music/leo_stars.mp3",
         image: "Content/Images/Album/fancyThat_album.webp",
-        album: "from Fancy That",
+        album: "from Fancy That !!",
         text: "Born from July 23rd to August 22nd, Leos are passionate and natural born leaders! They can jump into any conversation and act like a natural. They create their own enthusiastic paths of life and can truly do anything they put their hearts into! Don’t be afraid to rely on them!",
     },
         {
@@ -46,7 +46,7 @@ const zodiacSigns = [
         song:"Do You Miss Me",
         sound: "Content/Music/virgo_DoYouMissMe.mp3",
         image: "Content/Images/Album/miss_me_albu.webp",
-        album: "Take Me Home",
+        album: "from Take Me Home !",
         text: "Born from August 23rd to September 22nd, Virgos are your one and only perfectionists. They don’t mind giving a helping hand, but that does sometimes mean they put others first rather than themselves. You can always rely on them to give good advice, but be careful, they can be a little judgmental!",
     },
         {
@@ -54,7 +54,7 @@ const zodiacSigns = [
         song:"Just For Me",
         sound: "Content/Music/libra_JustForMe.mp3",
         image: "Content/Images/Album/ToHellWithIt_album.webp",
-        album: "from To Hell With It",
+        album: "from To Hell With It !",
         text: "Born from September 23rd to October 22nd, Libras are on a mix wavelength of being extroverted and introverted. They are empathic and very peaceful, avoiding conflict in any way they can! A deep fear of being alone lies within them, so don’t ghost them!",
     },
         {
@@ -62,7 +62,7 @@ const zodiacSigns = [
         song:"Feelings",
         sound: "Content/Music/scorpio_Feelings.mp3",
         image: "Content/Images/Album/feelings_album.webp",
-        album: "from Heaven Knows",
+        album: "from Heaven Knows !!",
         text: "Born from October 23rd to November 21st, Scorpios can be intimidating at first, but they are very passionate and trustworthy. It can be hard to get to know them, but it's possible! Slowly, as they get comfortable, they let (most) of their walls down. Almost like they’re mystical…magical",
     },
         {
@@ -70,7 +70,7 @@ const zodiacSigns = [
         song:"Stateside",
         sound: "Content/Music/areis_stateside.mp3",
         image: "Content/Images/Album/stateside_album.webp",
-        album: "from Fancy That",
+        album: "from Fancy That !!!",
         text: "Born from March 20th to April 19th, Aries are confident and motivating people! They don’t really let anything hold them back and aren’t afraid to try anything new. That could mean flying abroad just to meet someone new!",
     },
         {
@@ -78,7 +78,7 @@ const zodiacSigns = [
         song:"Nice To Meet You",
         sound: "Content/Music/tarus_NiceToMeetYou.mp3",
         image: "Content/Images/Album/nice_to_album.webp",
-        album: "from Heaven Knows",
+        album: "from Heaven Knows !!!",
         text: "Born from April 20 to May 20, Taurus are wherever they find comfort and relaxation.  They appreciate stability and meaningful connections, so don’t be afraid to mingle with them! As loyal and fun as they can be, don’t catch them on a bad day, or you might just get caught up in their explosion!",
     },
         {
@@ -86,7 +86,7 @@ const zodiacSigns = [
         song:"The Aisle",
         sound: "Content/Music/gemini_TheAisle.mp3",
         image: "Content/Images/Album/aisle_album.webp",
-        album: "from Heaven Knows",
+        album: "from Heaven Knows !!",
         text: "Born from May 21st to June 20th, Geminis are charismatic, sociable, and ready for any kind of fun. They are active and curious individuals, so you'd better keep up! Don’t underestimate them! Even if they seem to be joking around, they can be quick-witted",
     },
         {
@@ -94,7 +94,7 @@ const zodiacSigns = [
         song:"Mosquito",
         sound: "Content/Music/cancer_Mosquito.mp3",
         image: "Content/Images/Album/mosquito_album.webp",
-        album: "from Heaven Knows",
+        album: "from Heaven Knows !",
         text: "Born from June 21st to July 22nd, Cancers are on the more of the sensitive side, so watch what you say! They take things seriously and care deeply about many things. They require  comfort and stability, avoiding from sudden changes!",
     },
 ];
